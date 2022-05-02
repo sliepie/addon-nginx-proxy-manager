@@ -25,8 +25,6 @@ RUN \
         apache2-utils=2.4.48-r0 \
         certbot=1.16.0-r0 \
         libcap=2.50-r0 \
-        mariadb-client=10.5.12-r0 \
-        mariadb=10.5.12-r0 \
         nginx-mod-stream=1.20.1-r3 \
         nginx=1.20.1-r3 \
         nodejs=14.17.4-r0 \
@@ -83,7 +81,6 @@ RUN \
         /opt/nginx-proxy-manager/migrations/20190227065017_settings.js \
     \
     && mkdir -p \
-        /run/mysqld \
         /run/nginx \
     \
     && modclean \
@@ -107,7 +104,6 @@ RUN \
         /tmp/* \
         /usr/lib/node_modules \
         /usr/local/share/.cache \
-        /var/lib/mysql \
         /var/lib/nginx \
         /var/log/nginx \
         /var/tmp/nginx \
