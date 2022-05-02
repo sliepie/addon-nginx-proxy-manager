@@ -114,14 +114,14 @@ then
     || bashio::exit.nok "Could not generate dummy certificate"
 fi
 
-# Set up database connection
-query=".database.engine = \"sqlite\"
-    # | .database.host = \"${_host}\"
-    # | .database.name = \"nginxproxymanager\"
-    # | .database.user = \"${_username}\"
-    # | .database.password = \"${_password}\"
-    # | .database.port = ${_port}"
+# # Set up database connection
+# query=".database.engine = \"sqlite\"
+#     # | .database.host = \"${_host}\"
+#     # | .database.name = \"nginxproxymanager\"
+#     # | .database.user = \"${_username}\"
+#     # | .database.password = \"${_password}\"
+#     # | .database.port = ${_port}"
 
-# shellcheck disable=SC2094
-cat <<< "$(jq "${query}" /data/manager/production.json)" \
-    > /data/manager/production.json
+# # shellcheck disable=SC2094
+# cat <<< "$(jq "${query}" /data/manager/production.json)" \
+#     > /data/manager/production.json
